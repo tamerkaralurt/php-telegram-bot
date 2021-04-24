@@ -70,8 +70,7 @@ class TelegramBot
         if (curl_errno($ch)) {
             print_r(curl_error($ch));
         }
-        $answer = json_decode($result);
-        print_r($answer);
+        return $result;
     }
 }
 
