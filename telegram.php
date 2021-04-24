@@ -84,7 +84,8 @@ if ($data->text == 'hello') {
 }
 
 $dotusd = $telegram->getDotUsd();
-die($dotusd->data->daily);
+print($dotusd->data->daily);
+exit;
 
 if (isset($data->text)) {
     switch (trim($data->text, '/')) {
