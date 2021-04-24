@@ -86,6 +86,7 @@ if ($data->text == 'hello') {
 $dotusd = $telegram->getDotUsd();
 $daily = $dotusd->data[0]->daily;
 $dailyPercent = $dotusd->data[0]->dailyPercent;
+$last = $dotusd->data[0]->last;
 
 if (isset($data->text)) {
     switch (trim($data->text, '/')) {
@@ -93,7 +94,7 @@ if (isset($data->text)) {
             $telegram->sendMessage("KAR ZARAR: Günlük 2 Saatlik: $daily Günlük 2 Saatlik Yüzde: % $dailyPercent");
             break;
         case 'durum':
-            $telegram->sendMessage("DURUM");
+            $telegram->sendMessage("SON DURUMU: $last");
             break;
         default:
             $telegram->sendMessage('Bilinmeyen Komut!');
