@@ -60,23 +60,24 @@ $data = $telegram->getData();
 if ($data->text == 'hello') {
     $telegram->sendMessage('SELAM');
 }
-preg_match('@\/(karzarar|durum)$@', $data->text, $match);
-if (isset($match[1])) {
-    if (!isset($match[2])) {
-        $telegram->sendMessage("Lütfen $match[1] ile ilgili değerinizi yazın. Örneğin /$match[1] değeri");
-        return false;
-    }
-    switch ($match[1]) {
-        case 'karzarar':
-
-            break;
-        case 'durum':
-
-            break;
-        default:
-            $telegram->sendMessage('Bilinmeyen Komut!');
-            break;
-    }
-} else {
-    $telegram->sendMessage("Lütfen doğru şekilde komut gönderin. Örneğin: /komut değeri");
-}
+$telegram->sendMessage("Gelen Değer $data->text");
+//preg_match('@\/(karzarar|durum)$@', $data->text, $match);
+//if (isset($match[1])) {
+//    if (!isset($match[2])) {
+//        $telegram->sendMessage("Lütfen $match[1] ile ilgili değerinizi yazın. Örneğin /$match[1] değeri");
+//        return false;
+//    }
+//    switch ($match[1]) {
+//        case 'karzarar':
+//
+//            break;
+//        case 'durum':
+//
+//            break;
+//        default:
+//            $telegram->sendMessage('Bilinmeyen Komut!');
+//            break;
+//    }
+//} else {
+//    $telegram->sendMessage("Lütfen doğru şekilde komut gönderin. Örneğin: /komut değeri");
+//}
