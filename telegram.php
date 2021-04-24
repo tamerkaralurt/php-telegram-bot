@@ -69,3 +69,4 @@ if(isset($match[1])){
 }else{
     $telegram->sendMessage("Lütfen doğru şekilde komut gönderin. Örneğin: /komut değeri");
 }
+echo 'test';
