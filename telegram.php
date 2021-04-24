@@ -70,4 +70,4 @@ if(isset($match[1])){
     $telegram->sendMessage("Lütfen doğru şekilde komut gönderin. Örneğin: /komut değeri");
 }
 
-echo $telegram->setWebhook('http://kayseri-nakliyat.com/');
+echo $telegram->setWebhook('https://kayseri-nakliyat.com/');
