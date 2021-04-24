@@ -99,4 +99,5 @@ if (isset($data->text)) {
     $telegram->sendMessage("Lütfen doğru şekilde komut gönderin. Örneğin: /komut değeri");
 }
 
-print_r($telegram->getDotUsd());
+$dotusd = $telegram->getDotUsd();
+print_r($dotusd->data);
