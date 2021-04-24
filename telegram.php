@@ -47,7 +47,7 @@ class TelegramBot {
 
 }
 $telegram = new TelegramBot();
-$telegram->setToken('token');
+$telegram->setToken('1757316905:AAFPohIVReOYaM9I7mCwKlMajBz5wPedT1A');
 $data = $telegram->getData();
 if($data->text == 'hello'){
     $telegram->sendMessage('SELAM');
