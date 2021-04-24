@@ -87,7 +87,7 @@ if (isset($data->text)) {
     switch (trim($data->text, '/')) {
         case 'karzarar':
             $dotusd = $telegram->getDotUsd();
-            $telegram->sendMessage("KAR ZARAR: Günlük 2 Saatlik: ".$dotusd->data->daily." Günlük 2 Saatlik Yüzde: % ".$dotusd->data->dailyPercent."");
+            $telegram->sendMessage("KAR ZARAR: Günlük 2 Saatlik: ".$dotusd['data']['daily']." Günlük 2 Saatlik Yüzde: % ".$dotusd['data']['dailyPercent']."");
             break;
         case 'durum':
             $telegram->sendMessage("DURUM");
